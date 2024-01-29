@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Registration Form</h2>
+
+      <label for="correo">Correo Electronico:</label>
+      <input id ="correo" type="email" name="correo">
+
+      <label for="clave">Contraseña</label>
+      <input id="clave" type="password" name="clave">
+
+      <label for="name">Name and Lastname</label>
+      <input id="name" type="text" placeholder="Pablo Diaz" name="nombre">
+
+      <label for="fecha">Introduce fecha nacimiento:</label>
+      <input type="date" id="fecha" name="fecha" max="2024-01-18">
+
+      <label for="phoneNumber">Numero de Telefono:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="XXXXXXXXX">
+
+      <label for="plans">Elige un plan:</label>
+      <select id="plans" id="plans" name="plans" required>
+        <option value="" disabled selected>Elige un plan</option>
+        <option value="freePlan">Plan Gratuito</option>
+        <option value="threePlan">Plan de 3 personas</option>
+        <!-- <option value="ProPlan">Plan Profesional</option> -->
+      </select>
+
+      
+      <label for="prem">Paquete</label>
+      <input type="checkbox" id="prem" name="prem"><p>Paquete premium</p>
+      
+      <label for="creditCard">Tarjeta de credito</label>
+      <input type="text" id="creditCard" inputmode="numeric" pattern="[0-9]+" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required/>
+
+      <label for="cvc">CVC</label>
+      <input type="text" id="cvc" inputmode="numeric" name="cvc" maxlength="3" pattern="[0-9]+" placeholder="XXX" required>
+
+      <label for="exprDate">Fecha de expiracion</label>
+      <input type="date" id="exprDate" name="exprDate" min="2024-01-18">
+
+      <label for="billAdress">Direccion de Facturacion</label>
+      <input type="text" id="billAdress" name="billAdress">
+
+      <br>
+      <br>
+      
+      <button>Enviar</button>
+
+      <!-- <details>
+        <summary><label for="plan">Elige un plan</summary>
+          <ul>
+              <li>free</li>
+              <li>3</li>
+              <li>pro<input type="checkbox" name="plan"></li>
+          </ul>
+      </details> -->
+
+
+
+
+    </form>
+  </body>
+</html>
