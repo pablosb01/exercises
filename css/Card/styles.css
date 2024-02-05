@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card article {
+    border-bottom: 1px solid #ddd;
+}
+
+.card article:last-child {
+    border-bottom: none;
+}
+
+.card article > * {
+    padding: 20px;
+}
+
+.card h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0 0 15px;
+}
+
+.card nav a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.card nav a:hover {
+    text-decoration: underline;
+}
