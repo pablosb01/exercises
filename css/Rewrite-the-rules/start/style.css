@@ -1,0 +1,15 @@
+:root{
+    --negro:#011212;
+    --naranja:#ff8800;
+    --dimension: 100px;
+}
+body {
+    background-color: var(--negro);
+}
+
+.ball {
+    width: var(--dimension);
+    height: var(--dimension);
+    background-color: var(--naranja);
+    border-radius: calc(var(--dimension)/2);
+}

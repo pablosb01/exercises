@@ -7,7 +7,7 @@ body {
 nav {
     background-color: rgb(55, 52, 68);
     display: flex;
-    padding: 5px;
+    padding: 3px;
     align-items: center;
 }
 
