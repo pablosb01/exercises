@@ -1,0 +1,51 @@
+
+html, body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li {
+    list-style: none;
+    background-color: #fff;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#green {
+    order: 3;
+    width: 10%;
+    background-color: rgb(181, 255, 230);
+}
+#yellow {
+    order: 1;
+    width: 15%;
+    background-color: rgb(255, 255, 200);
+}
+#orange {
+    order: 4;
+    width: 50%;
+    background-color: rgb(255, 227, 176);
+}
+#red {
+    order: 2;
+    width: 15%;
+    background-color: rgb(255, 201, 201);
+}
+#blue {
+    order: 5;
+    width: 10%;
+    background-color: rgb(193, 235, 255);
+}
