@@ -42,6 +42,12 @@
     background-color: rgb(255, 144, 144);
     border: 1px solid black;
 }
-div:hover{
+.fr:hover{
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+.num:hover{
+    box-shadow: 0 0 15px 0 rgba(255, 0, 0, 0.5);
+}
+.equal:hover{
+    box-shadow: 0 0 15px 0 rgba(0, 255, 21, 0.5);
 }
