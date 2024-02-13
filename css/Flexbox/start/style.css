@@ -1,0 +1,28 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 200px;
+    height: 100%;
+    align-items: center;
+}
+.logo{
+    width: 100%;
+}
+a{
+    color: #2b2b2b;
+    transition: 300ms;
+}
+a:hover{
+    color: #2b2bb2;
+}
+.cara{
+    
+    width: 100%;
+}
+footer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
