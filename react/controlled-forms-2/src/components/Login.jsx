@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Login({onLogin}) {
+function Login({funcionEnFormaDeProp}) {
     //State variables to hold form data
     const [formData, setFormData] = useState({
         username:'',
@@ -21,7 +21,7 @@ function Login({onLogin}) {
     const handleSubmit = (event) => {
         event.preventDefault();
         //logica para enviar datos del formulario
-        onLogin(formData);
+        funcionEnFormaDeProp(formData);
     };
 
     //declaro variable isDisabled, que es igual a un booleano (true o false) dependiendo si hay contenido(texto) en formData(username o password) que es lo que se pone en el form
