@@ -1,0 +1,16 @@
+.container {
+    border: 2px solid red;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .content {
+    margin-top: 10px;
+  }
+  
