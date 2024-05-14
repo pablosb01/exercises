@@ -8,6 +8,10 @@ function Counter() {
         setCount(count + 1)
     }
 
+    function restOne() {
+        setCount(count - 1)
+    }
+
     function reset() {
         setCount(0)
     }
@@ -16,6 +20,7 @@ function Counter() {
         <>
             <CounterDisplay count={count} />
             <button onClick={addOne}>add one</button>
+            <button onClick={restOne}>rest one</button>
             <button onClick={reset}>reset</button>
         </>
     )
