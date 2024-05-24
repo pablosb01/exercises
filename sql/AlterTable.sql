@@ -1,0 +1,1 @@
+ALTER TABLE bookstore ADD COLUMN number_pages INTEGER, ADD COLUMN publisher VARCHAR(20)
