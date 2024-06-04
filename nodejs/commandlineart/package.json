@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "figlet": "^1.7.0"
+  },
+  "name": "commandlineart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.msj"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
