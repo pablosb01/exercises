@@ -1,6 +1,21 @@
 const pgPromise = require("pg-promise");
 const joi = require("joi");
+const multer = require('multer')
+
 const db = pgPromise()("postgres://postgres:postgres@localhost:5432/postgres");
+
+//setup multer
+/* const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
+  },
+})
+const upload = multer({ storage: storage }) */
+
+
 /* db.connect()
   .then((object) => console.log(object))
   .catch((err) => console.error(err)); */
@@ -10,7 +25,8 @@ async function setupDB () {
         DROP TABLE IF EXISTS planets;
         CREATE TABLE planets(
         id SERIAL NOT NULL PRIMARY KEY,
-        name TEXT NOT NULL)`
+        name TEXT NOT NULL,
+        image TEXT)`
     );
     await db.none(`INSERT INTO planets (name) VALUES ('earth')`)
     await db.none(`INSERT INTO planets (name) VALUES ('mars')`)
@@ -49,7 +65,6 @@ const mainController = {
         data: result.error.message,
       });
     } */
-   console.log(newName)
 
     res.status(201).json({
       msg: "planets created",
@@ -75,6 +90,23 @@ const mainController = {
       data: planet,
     });
   },
+
+  addImage: async (req, res) => {
+    const  { id }  = req.params
+    const fileName = req.file.filename
+    console.log(req)
+    console.log(id)
+    if(!req.file) {
+      return res.status(400).json({
+        msg: 'ERR NO FILE'
+      })
+    }
+    await db.none('UPDATE planets SET image=$2 WHERE id=$1', [id, fileName])
+    res.status(200).json({
+      msg: 'added',
+      data: fileName
+    })
+  }
 };
 
 module.exports = mainController;
